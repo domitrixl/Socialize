@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="SocialMediaApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SocialMediaApp"
+    xmlns:volDash="clr-MyApp.Views.VolDash"
+    Shell.FlyoutBehavior="Disabled"
+    >
+
+    <TabBar>
+        <Tab Icon="home1.png" Title="Home">
+            <ShellContent>
+                
+                <local:page_home/>
+            </ShellContent>
+        </Tab>
+        <Tab Icon="messages1.png" Title="Messages">
+            <ShellContent>
+                <local:page_messages/>
+            </ShellContent>
+        </Tab>
+        <Tab Icon="profile1.png" Title="Profile">
+            <ShellContent>
+                <local:page_profile/>
+            </ShellContent>
+        </Tab>
+      
+    </TabBar>
+
+
+
+</Shell>

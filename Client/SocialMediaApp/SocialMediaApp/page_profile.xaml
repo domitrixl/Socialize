@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SocialMediaApp.page_profile"
+             Title="Profile"
+             BackgroundColor="Gray">
+
+
+
+    <ScrollView>
+        <Grid Margin="20,10,20,0" ColumnSpacing="10" RowSpacing="10" x:Name="grid_maingrid">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+
+
+            <ImageButton Source="bild3.jpg" x:Name="btn_profilepicture" Clicked="btn_profilepicture_Clicked" VerticalOptions="Center">
+                <ImageButton.Clip>
+                    <EllipseGeometry RadiusX="50"
+                             RadiusY="50"
+                             Center="50,50"/>
+                </ImageButton.Clip>
+            </ImageButton>
+
+            <Line
+                X1="0"
+                X2="100"
+                BackgroundColor="Black"
+                Grid.Row="1"
+                Margin="0,0,0,0"
+                Grid.ColumnSpan="3"
+                Opacity="0.2"
+                VerticalOptions="End"
+                />
+
+
+            <ImageButton
+                Grid.Row="2"
+                BackgroundColor="Transparent"
+                Grid.Column="0"
+                Scale="0.8"
+                VerticalOptions="Start"
+                HorizontalOptions="Center"
+                Source="plus.png"
+                x:Name="btn_addpics"
+                Clicked="btn_addpics_Clicked"/>
+
+            <Editor
+                Grid.Row="0"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                MaximumHeightRequest="100"
+                VerticalOptions="Fill"
+                MaxLength="100"
+                VerticalTextAlignment="Center"
+                Placeholder="About me..."
+                x:Name="editor_aboutme"
+                Completed="editor_aboutme_Completed"
+                />
+
+
+
+
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

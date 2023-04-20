@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SocialMediaApp.page_login"
+             Title="page_login"
+             BackgroundColor="Gray">
+    <VerticalStackLayout Margin="0,40,0,0"
+                          Spacing="60">
+
+        <ImageButton
+            Source="logonobackground.png"
+            Scale="1.0"
+            HorizontalOptions="Center"
+            BackgroundColor="Transparent"/>
+
+        <Entry
+            x:Name="entry_username"
+            Placeholder="Enter your username here..."
+            Margin="20,0,20,0"/>
+        <Entry
+            x:Name="entry_password"
+            Placeholder="Enter your password here..."
+            Margin="20,-50,20,0"/>
+
+        <Label
+            Text="Register..."
+            HorizontalOptions="Center"
+            Margin="0,-40,0,0"/>
+
+        <Button
+            Margin="80,-80,80,0"
+            BackgroundColor="Transparent"
+            BorderColor="Transparent"
+            x:Name="btn_register"
+            Clicked="btn_register_Clicked"/>
+
+        <Button
+            x:Name="btn_login"
+            Clicked="btn_login_Clicked"
+            Text="Login"
+            VerticalOptions="End"
+            Margin="0,170,0,0"/>
+
+    </VerticalStackLayout>
+
+</ContentPage>

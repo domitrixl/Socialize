@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SocialMediaApp.page_inchats"
+             Title="Messages"
+             BackgroundColor="Gray">
+
+
+    <VerticalStackLayout Padding="10">
+        <Grid ColumnSpacing="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ImageButton
+                Source="profile.png"
+                BackgroundColor="Transparent"/>
+
+            <Label
+                Text=""
+                Grid.Column="1"
+                x:Name="lbl_name"
+                VerticalOptions="Center"/>
+
+            <Label
+                Text="X"
+                Grid.Column="3"
+                TextColor="Red"
+                VerticalOptions="Center"
+                HorizontalOptions="End"/>
+
+            <Button
+                Grid.Column="3"
+                Grid.Row="0"
+                BackgroundColor="Transparent"
+                BorderColor="Transparent"
+                x:Name="btn_del"
+                Clicked="btn_del_Clicked"/>
+
+        </Grid>
+        <Grid RowDefinitions="*">
+            <ScrollView VerticalOptions="FillAndExpand">
+                <VerticalStackLayout x:Name="vsl_messages" Padding="15" Spacing="8" MinimumHeightRequest="500">
+
+                </VerticalStackLayout>
+            </ScrollView>
+        </Grid>
+        <Grid ColumnSpacing="5" >
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+
+            <Entry
+                Grid.Row="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                MaximumHeightRequest="50"
+                VerticalOptions="Center"
+                x:Name="entry_text"
+                HorizontalOptions="Center"
+                MinimumWidthRequest="300"
+                AbsoluteLayout.LayoutBounds="0,10,200,5"
+                />
+
+
+
+            <Label
+                Text="▲"
+                Grid.Row="3"
+                Grid.Column="3"
+                FontSize="25"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+
+            <Button
+                Text=""
+                BackgroundColor="Transparent"
+                Grid.Row="3"
+                Grid.Column="3"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                x:Name="btn_send"
+                Clicked="btn_send_Clicked"
+                BorderColor="Transparent"/>
+
+        </Grid>
+
+
+    </VerticalStackLayout>
+
+
+</ContentPage>
