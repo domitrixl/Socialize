@@ -1,0 +1,9 @@
+
+
+
+
+Byte		Use
+1		typeOfRequest
+
+1 - 36		Username
+37 - 97		Password
